@@ -1,0 +1,72 @@
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Homepage
+{% endblock %}
+
+{% block body %}
+
+<section class="contact-page">
+    <div class="contact">
+        <div class="content">
+            <h2>Contact us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur odio ipsa tempora illum natus
+                ratione nihil!
+            </p>
+        </div>
+        <div class="cont-container">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    </div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>Lorem ipsum dolor sit.<br>Lorem, ipsum.<br>3333333</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                    </div>
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <p>333333333333</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <!--  -->
+                <form class="form-contact" onsubmit="sendEmail(); reset(); return false;">
+                    <h2>Send Messages</h2>
+                    <div class="cont-input-box">
+                        <input type="text" class="item" id="Name" oninput="checkInputValue(this)">
+                        <span class="floating-label">Full name</span>
+                        <div class="error-txt">Full name can't be blank</div>
+                    </div>
+                    <div class="cont-input-box">
+                        <input type="email" class="item" id="Email" oninput="checkInputValue(this)">
+                        <span class="floating-label">Email</span>
+                        <div class="error-txt">Email can't be blank</div>
+                    </div>
+                    <div class="cont-input-box">
+                        <input type="text" class="item" id="Contact" oninput="checkInputValue(this)">
+                        <span class="floating-label">Contact</span>
+                        <div class="error-txt">Contact can't be blank</div>
+                    </div>
+                    <div class="cont-input-box">
+                        <textarea class="item" id="problem"></textarea>
+                        <span>Enter your problems here</span>
+                        <div class="error-txt">Message can't be blank</div>
+                    </div>
+                    <div class="cont-input-box">
+                        <input type="submit" value="send">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Purchase Confirmed - {{ product.title }}
+{% endblock %}
+
+{% block body %}
+    <div class="container mt-4">
+        <h2>Purchase Confirmed</h2>
+        <p>Thank you for purchasing <strong>{{ product.title }}</strong>!</p>
+        
+        <p>We've received the following details:</p>
+        <ul>
+            <li><strong>Name:</strong> {{ name }}</li>
+            <li><strong>Address:</strong> {{ address }}</li>
+            <li><strong>Payment Information:</strong> {{ payment_info }}</li>
+        </ul>
+        
+        <p>You will receive a confirmation email shortly.</p>
+
+        <a href="{% url 'index' %}" class="btn btn-primary">Go Back Home</a>
+    </div>
+{% endblock %}

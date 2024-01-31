@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Admission
+{% endblock %}
+
+{% block body %}
+    
+
+
+    <section class="admission">
+        <div class="containers">
+            <div class="title">Application for admission</div>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="user-data">
+                    <div class="names">
+                        <div>
+                            <span class="details">First Name</span>
+                            <input type="text" id="firstName" name="first_name" placeholder="Enter your name here"
+                                required>
+                        </div>
+                        <div>
+                            <span class="details">last Name</span>
+                            <input type="text" id="lastName" name="last_name" placeholder="Enter your name here"
+                                required>
+                        </div>
+                    </div>
+                    <div class="names">
+                        <div>
+                            <span class="details">Date of Birth</span>
+                            <input type="date" id="DOB" name="date_of_birth">
+                        </div>
+                        <div>
+                            <span class="details">Contact number</span>
+                            <input type="text" id="contact" name="contact_info" placeholder="Enter your name here"
+                                required>
+                        </div>
+                    </div>
+                    <div style="padding-top: 3rem;">
+                        <span class="details">Address</span>
+                        <input type="text" id="address" name="address" style="height: 90px; font-size: var(fs-title); "
+                            placeholder="Enter your name here" required>
+                    </div>
+                    <div style="padding-top: 3rem;">
+                        <span class="details">Name of coach</span>
+                        <input type="text" name="coach"
+                            placeholder="Enter your name here" required>
+                    </div>
+                    <div class="names">
+                        <div>
+                            <span class="details">Branch</span>
+                            <select name="branch" id="cars">
+                                <option value="Nerul">Nerul</option>
+                                <option value="Kharghar">Kharghar</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="fs-title ff-imprima" style="padding-top: 3rem;">
+                        Admission type
+                    </div>
+                    
+                    <div type="button" class="buttons button-texts" id="minorButton"
+                        style="margin-top: 3rem; border-radius: 0.5rem;">
+                        In case of minor
+                    </div>
+                    <div style="padding-top: 3rem;">
+                        <span class="details">Name of parents</span>
+                        <input type="text" name="parent_name" placeholder="Enter your name here" required>
+                    </div>
+                    <div class="names">
+                        <div>
+                            <span class="details">Relation</span>
+                            <input type="text" name="Relation" placeholder="Enter your name here" required>
+                        </div>
+                        <div>
+                            <span class="details">Profession</span>
+                            <input type="text" name="parent_profession" placeholder="Enter your name here" required>
+                        </div>
+                    </div>
+                    <div class="input-box" >
+                        <input type="submit" value="Confirm Purchase" style="background-color:#f1b00b ;">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+{% endblock %}

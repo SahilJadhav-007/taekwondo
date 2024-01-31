@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    login
+{% endblock %}
+
+{% block body %}
+<section class="login">
+    <div class="login-form">
+        <form method="post" action="" class="login-details" style="width:100%">
+            {% csrf_token %}
+            <p class="ff-imprima fs-title" style="padding-bottom:2rem">Enter login details</p>
+    
+    
+            <div class="input-box">
+                <span class="details">Full Name</span>
+                <input type="text" name="username" placeholder="Enter your full name" required>
+            </div>
+    
+            <div class="input-box">
+                <span class="details">email</span>
+                <input type="text" name="email" placeholder="Enter your address" required>
+            </div>
+    
+            <div class="input-box">
+                <span class="details">password</span>
+                <input type="password" name="password" placeholder="Enter payment details" required>
+            </div>
+            <div class="input-box" >
+                <input type="submit" value="Login" style="background-color:#f1b00b ;">
+            </div>
+        </form>
+    
+    </div>
+    
+
+</section>
+{% endblock %}
